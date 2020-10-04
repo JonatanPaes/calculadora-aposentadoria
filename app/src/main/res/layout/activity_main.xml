@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <EditText
+    android:id="@+id/txtNome"
+    android:layout_width="360dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="60dp"
+    android:ems="10"
+    android:hint="Digite seu nome"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+    android:id="@+id/txtIdade"
+    android:layout_width="360dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="30dp"
+    android:ems="10"
+    android:hint="Digite sua idade (anos)"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+  <EditText
+    android:id="@+id/txtContribuicao"
+    android:layout_width="360dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="30dp"
+    android:ems="10"
+    android:hint="Digite seus anos de contribuição"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txtIdade" />
+
+  <RadioGroup
+    android:id="@+id/radioGroup"
+    android:layout_width="360dp"
+    android:layout_height="66dp"
+    android:layout_marginTop="40dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txtContribuicao">
+
+    <RadioButton
+      android:id="@+id/radioButtonHomem"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Homem" />
+
+    <RadioButton
+      android:id="@+id/radioButtonMulher"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Mulher" />
+  </RadioGroup>
+
+  <Button
+    android:id="@+id/buttonCalcular"
+    android:layout_width="360dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="30dp"
+    android:background="#9764BE"
+    android:onClick="btnCalcularAposentadoria"
+    android:text="calcular aposentadoria"
+    android:textColor="#FFFFFF"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.509"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+    app:layout_constraintVertical_bias="0.12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
